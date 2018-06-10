@@ -44,7 +44,7 @@ TODO
 
 ## Authors
 
-* **Poliane Ketterine Valdrich** - *Initial work* - [PurpleBooth](https://github.com/valdrich)
+* **Poliane Ketterine Valdrich** - *Projeto* - [valdrich](https://github.com/valdrich)
 
 
 ## Acknowledgments
