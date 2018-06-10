@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form action='/promocoes' method="post">
+        <div>
+            <input type="text" name="mensagem"/>
+        </div>
+        <div>
+            <select name="livro[id]">
+                <%for(var i=0;i<lista.length;i++){%>
+                    <option value="<%=lista[i].id%>"><%=lista[i].titulo%></option>
+                <%}%>
+            </select>
+        </div>
+        <input type="submit" value="Cadastrar promoção"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script>
+            var socket = io();
+            //var socket = new io.Socket('localhost',{'port':3000});
+            socket.connect();
+            console.log(socket);
+            socket.on('novaPromocao',function(data){
+                alert("Livro em promocao "+data.livro.id);
+            });
+        </script>
+    </body>
+</html>
